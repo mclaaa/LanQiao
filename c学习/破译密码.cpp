@@ -14,11 +14,7 @@ int main()
 	n=strlen(s);
 	for(i=0; i<n; i++)
 	{
-		if(s[i] >= 'a' && s[i] <= 'z' && s[i] >= 'w') //97 122 119
-		{
-			a[i] = s[i] - 22;
-		}
-		else if(s[i] >= 'A' && s[i] <= 'Z' && s[i] >= 'W')	//65 90 87
+		if((s[i] <= 'z' && s[i] >= 'w') || (s[i] <= 'Z' && s[i] >= 'W'))
 		{
 			a[i] = s[i] - 22;
 		}
@@ -29,7 +25,7 @@ int main()
 		printf("%c",a[i]);
 	}
 	
-return 0;
+	return 0;
 
 }
 
